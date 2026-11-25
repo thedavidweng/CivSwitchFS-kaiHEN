@@ -15,13 +15,13 @@ export const HEN_TITLE = 0x040000000000003an;  // HEN title (bootstrap's own lau
 
 export const SD_MANIFEST = {
     "bootstrap": {path: "/kaihen/bin/bootstrap.bin", size: 27948},
-    "ro": {path: "/kaihen/bin/ro/main", size: 23854},
-    "hen": {path: "/kaihen/bin/hen/main", size: 78765},
-    "game": {path: "/kaihen/bin/game/main", size: 63424},
+    "ro": {path: "/kaihen/bin/ro/main", size: 29198},
+    "hen": {path: "/kaihen/bin/hen/main", size: 78763},
+    "game": {path: "/kaihen/bin/game/main", size: 71761},
     // Payload files, not chain-critical: the HEN boots without them
     // (hbmenu is what holding R opens; programs/ is OunceShell).
-    "hbmenu": {path: "/hbmenu.nro", size: 11790974, optional: true},
-    "programs": {path: "/switch/ounceshell/ounceshell.nro", size: 22294859,
+    "hbmenu": {path: "/hbmenu.nro", size: 11852414, optional: true},
+    "programs": {path: "/switch/ounceshell.nro", size: 22352203,
         optional: true}
 };
 

@@ -26,7 +26,7 @@ Beware that fs vuln can be risky to utilize and may corrupt things like your sav
 - Nintendo Switch 2, firmware **23.0.1** (only exFAT fw tested, FAT32 should work too). Do not use on lower firmware!
 - **Civilization VII 1.0.0**, physical cartridge
 - CivSwitch Remote JS Loader already running (follow [CivSwitch instructions](https://github.com/Gezine/CivSwitch))
-- kaiHEN 20261117.1 (later versions may not work)
+- kaiHEN 20261123 (later versions may not work)
 
 ### Requirements
 
@@ -88,7 +88,7 @@ The copy in this repo's releases is going to match the SD format, but if you wan
 | `hen/main` | `/kaihen/bin/hen/main` |
 | `game/main` | `/kaihen/bin/game/main` |
 | `hbmenu.nro` | `/hbmenu.nro` |
-| `programs/ounceshell.nro` | `/switch/ounceshell/ounceshell.nro` |
+| `sdcard/switch/ounceshell.nro` | `/switch/ounceshell.nro` |
 
 If a file is missing, the chain refuses right after the promotion with
 `SD files missing: …` instead of wasting the boot.
@@ -133,7 +133,7 @@ The payload reads these values from [`src/core/config.mjs`](src/core/config.mjs)
 boot. Once kaiHEN runs, holding R while opening a game starts hbmenu
 instead of the game. kaiHEN normally starts from SmileBASIC (a Switch
 game with a built-in BASIC interpreter); this chain starts it from
-Civilization VII. Targets the **20261117.1** release on firmware 23.0.1;
+Civilization VII. Targets the **20261123** release on firmware 23.0.1;
 the previous **20261116** chain was verified both docked (Ethernet) and
 undocked (WiFi).
 
@@ -147,7 +147,7 @@ Run the exploit first, wait for the success line, then the launcher:
 
 ```sh
 npm run send -- <console-ip>      # wait for "You just Civ Sevened"
-node tools/kaihen.mjs <console-ip> --dir /path/to/kaiHEN-20261117.1
+node tools/kaihen.mjs <console-ip> --dir /path/to/kaiHEN-20261123
 ```
 
 A successful run ends with:
@@ -172,7 +172,7 @@ want to keep it.
 
 | Option | Effect |
 |---|---|
-| `--dir DIR` | kaiHEN release folder, in our SD-shaped layout (default `../kaiHEN-20261117.1` from the repo root) |
+| `--dir DIR` | kaiHEN release folder, in our SD-shaped layout (default `../kaiHEN-20261123` from the repo root) |
 | `--status-only` | report SD state and exit |
 | `--force` | restage files even when their size already matches |
 | `--no-hbmenu`, `--no-programs` | skip staging those files |
